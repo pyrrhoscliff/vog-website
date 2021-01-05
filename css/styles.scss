@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Staatliches&family=Titillium+Web:wght@400;700&display=swap');
+
+:root {
+
+    // Fonts
+    --base-font-family: 'Montserrat', sans-serif;
+    --base-header-family: 'Titillium Web', sans-serif;
+    --landing-page-font-family: 'Staatliches', cursive;
+
+
+    // Primary Colors
+    --white: hsla(0, 100%, 100%, 1);
+    --deep-space-sparkle: hsla(193, 34%, 30%, 1);
+    --deeper-space-sparkle: rgb(27, 60, 70);
+    --medium-champagne: hsla(51, 100%, 85%, 1);
+    --indian-yellow: hsla(36, 72%, 56%, 1);
+    --auburn: hsla(359, 58%, 39%, 1);
+    --rosewood: hsla(358, 77%, 19%, 1);
+
+    // Shades of Gray
+    --cultured: hsla(210, 17%, 98%, 1);
+    --cultured-2: hsla(210, 16%, 93%, 1);
+    --gainsboro: hsla(210, 14%, 89%, 1);
+    --light-gray: hsla(210, 14%, 83%, 1);
+    --cadet-blue-crayola: hsla(210, 11%, 71%, 1);
+    --slate-gray: hsla(208, 7%, 46%, 1);
+    --davys-grey: hsla(210, 9%, 31%, 1);
+    --gunmetal: hsla(210, 10%, 23%, 1);
+    --charleston-green: hsla(210, 11%, 15%, 1);
+
+    // Gradients
+    --landing-page-gradient: linear-gradient(90deg, rgba(27,60,70,1) 0%, rgba(86,11,14,1) 40%, rgba(224,159,62,1) 100%);
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    background: var(--deeper-space-sparkle);
+    background: var(--landing-page-gradient);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.landing-page-title {
+    color: var(--white);
+    font-family: var(--base-header-family);
+    font-size: 4em;
+    font-weight: 700;
+    position: relative;
+    text-shadow: 2px 2px 5px #000;
+
+    &__mask-graphic {
+        position: relative;
+        top: -59px;
+        right: 3px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+}
+
+.landing-page-tagline {
+    color: var(--indian-yellow);
+    font-family: var(--base-font-family);
+    font-size: .8em;
+    margin: -48px;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        justify-content: start;
+        align-items: center;
+    }
+
+    .landing-page-title {
+        font-size: 3em;
+        padding: 30px 0 0 0;
+    
+        &__mask-graphic {
+            position: relative;
+            top: -46px;
+            right: 2px;
+            width: 31px;
+        }
+    }
+
+    .landing-page-tagline {
+        color: var(--medium-champagne);
+        font-family: var(--base-font-family);
+        font-size: .6em;
+        margin: -35px;
+    }
+
+  }
