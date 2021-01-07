@@ -1,36 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
+    // Letting me know the page finished loading
     console.log('Your Page Loaded');
 
-    // Get the caption DIV
+    // Get the mask-graphic-caption DIV
     const maskCaption = document.querySelector('.landing-page__title-mask-graphic-caption');
 
     // Get the tagline DIV
     const tagline = document.querySelector('.landing-page__tagline');
-
-    // MAKE THE TAGLINE PULL FROM AN ARRAY
-    // Array of taglines
-    let taglineArray = [
-    'There will be something here... One day.',
-    'The voice of the people is the voice of grog.',
-    'Are you telling me you built a TIME MACHINE... out of a delorean?!'
-    ];
+    const taglineSource = document.querySelector('.landing-page__tagline-source');
 
     // Pull a random tagline from the array    
-    const random = function(array) {
-        let randomItem = array[Math.floor(Math.random() * array.length)]
-        return randomItem;
+    const randomQuote = function (array) {
+        let randomItem = array[Math.floor(Math.random() * array.length)];
+        return array[randomItem.quote];
     }
-    
-    // Place the random tagline into the tagline DIV
-    tagline.innerText =  random(taglineArray);
 
+    // Fetching the quotes JSON File
+    const getQuotes = async () => {
 
-    // Load the caption DIV after a specific amount of time
+        const response = await fetch('./data/quotes.json');
+        const data = await response.json();
+        
+        // Get random item from data
+        const currentQuote = data[Math.floor(Math.random() * data.length)];
+
+        // Place the random tagline into the landing-page__tagline DIV
+        tagline.innerText = `${currentQuote.quote}`;
+        // Place the tagline source into the landing-page__tagline-source DIV
+        console.log(taglineSource);
+        taglineSource.innerText = `- ${currentQuote.source}`;
+
+    };
+
+    // Initiate fetch for a quote from the JSON file
+    getQuotes();
+
+    // Load the mask-graphic-caption DIV after 3 seconds
     setTimeout(function () {
         maskCaption.style.opacity = '1'
     }, 3000);
-
-
 
 });

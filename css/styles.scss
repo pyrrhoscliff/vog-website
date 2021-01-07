@@ -15,6 +15,8 @@
     --deeper-space-sparkle: rgb(27, 60, 70);
     --medium-champagne: hsla(51, 100%, 85%, 1);
     --indian-yellow: hsla(36, 72%, 56%, 1);
+    --indian-yellow-darker: hsla(36, 82%, 36%, 1);
+    --indian-yellow-lighter: hsla(36, 82%, 66%, 1);
     --auburn: hsla(359, 58%, 39%, 1);
     --rosewood: hsla(358, 77%, 19%, 1);
 
@@ -60,16 +62,17 @@ body {
     &__title {
         color: var(--white);
         font-family: var(--base-header-family);
-        font-size: 4em;
+        font-size: 5em;
         font-weight: 700;
+        margin: 0;
         position: relative;
         text-shadow: 2px 2px 5px #000;
     
         &-mask-graphic {
             position: relative;
             top: -59px;
-            right: 3px;
-            width: 40px;
+            right: 4px;
+            width: 43px;
             cursor: pointer;
             transition: ease all .3s;
             
@@ -82,10 +85,10 @@ body {
         &-mask-graphic-caption {
             color: var(--cultured);
             position: relative;
-            top: -62px;
+            top: -66px;
             right: 2px;
             font-family: var(--base-font-family);
-            font-size: .2em;
+            font-size: 6px;
             letter-spacing: 2px;
             opacity: 0;
             text-transform: uppercase;
@@ -96,10 +99,22 @@ body {
     &__tagline {
         color: var(--indian-yellow);
         font-family: var(--base-font-family);
-        font-size: .6em;
+        font-size: .7em;
+        font-weight: 700;
         letter-spacing: 1px;
         margin: -48px;
         text-transform: uppercase;
+
+        &-source {
+            color: var(--indian-yellow-lighter);
+            font-family: var(--base-font-family);
+            font-size: .5em;
+            letter-spacing: 1px;
+            position: relative;
+            top: 52px;
+            right: 0px;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -118,30 +133,42 @@ body {
 
         &__title {
             font-size: 3em;
+            margin: 0;
             padding: 30px 0 0 0;
         
             &-mask-graphic {
                 position: relative;
-                top: -46px;
+                top: -40px;
                 right: 2px;
-                width: 30px;
+                width: 27px;
             }
 
             &-mask-graphic-caption {
                 color: var(--cultured);
-                top: -49px;
+                top: -46px;
                 right: 2px;
                 font-family: var(--base-font-family);
-                font-size: .2em;
+                font-size: 5px;
                 letter-spacing: 1px;
             }  
         }
 
         &__tagline {
             color: var(--medium-champagne);
-            font-family: var(--base-font-family);
-            font-size: .3em;
-            margin: -35px;
+            font-family: var(--base-header-family);
+            font-size: .4em;
+            margin: -30px 0 0 0;
+
+            &-source {
+                color: var(--indian-yellow-lighter);
+                font-family: var(--base-header-family);
+                font-size: 6px;
+                letter-spacing: 1px;
+                position: relative;
+                top: 3px;
+                right: 3px;
+                text-transform: uppercase;
+            }
         }
     }
   }
@@ -149,7 +176,7 @@ body {
 @media (orientation: landscape) {
     .landing-page {
         &__title {
-            margin: -40px 0 0 0;
+            margin: -15% 0 0 0;
         }
     }
 }

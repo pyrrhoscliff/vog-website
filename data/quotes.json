@@ -1,0 +1,28 @@
+[{
+    "type": "person",
+    "quote": "There will be something on this site... One day.",
+    "source": "VoG"
+}, {
+    "type": "movie",
+    "quote": "You met me at a very strange time in my life.",
+    "source": "Fight Club"
+}, {
+    "type": "book",
+    "quote": "The voice of the people is the voice of grog.",
+    "source": "Gazette of the United States",
+    "author": "Unknown"
+}, {
+    "type": "person",
+    "quote": "Time you enjoy wasting is not wasted time.",
+    "source": "Marthe Troly-Curtin"
+}, {
+    "type": "person",
+    "quote": "The good thing about science is that it's true whether or not you believe in it.",
+    "source": "Neil deGrasse Tyson"
+}, {
+    "type": "person",
+    "quote": "Never attribute to malice that which can be adequately explained by stupidity.",
+    "source": "Robert A. Heinlein"
+}
+
+]
