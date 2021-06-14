@@ -28,8 +28,8 @@ async function getQuotes() {
 
     // Place the random tagline into the landing-page__tagline DIV
     tagline.innerText = `${currentQuote.quote}`;
+ 
     // Place the tagline source into the landing-page__tagline-source DIV
-    console.log(taglineSource);
     taglineSource.innerText = `- ${currentQuote.source}`;
 
 }
